@@ -10,22 +10,24 @@ JavaScript 에 관한 객관식 문제를 [Instagram](https://www.instagram.com/
 <a target="_blank" href="https://www.theavocoder.com/subscribe"><b>✨✉이메일 업데이트 구독 ✉✨</b></a>
 
 사용 가능한 언어 목록:
-* [English](../en-EN/README.md)
-* [العربية](../ar-AR/README_AR.md)
-* [اللغة العامية - Egyptian Arabic](../ar-EG/README_ar-EG.md)
-* [Bosanski](../bs-BS/README-bs_BS.md)  
-* [Deutsch](../de-DE/README.md)  
-* [Español](../es-ES/README-ES.md)
-* [Français](../fr-FR/README_fr-FR.md)
-* [日本語](../ja-JA/README-ja_JA.md)  
-* [한국어](../ko-KR/README-ko_KR.md) 
-* [Português Brasil](../pt-BR/README_pt_BR.md)  
-* [Русский](../ru-RU/README.md)
-* [Українська мова](../ua-UA/README-ua_UA.md)  
-* [Tiếng Việt](../vi-VI/README-vi.md)
-* [中文版本](../zh-CN/README-zh_CN.md)
-* [Türkçe](../tr-TR/README-tr_TR.md)
-* [ไทย](../th-TH/README-th_TH.md)
+- [🇸🇦 العربية](./ar-AR/README_AR.md)
+- [🇪🇬 اللغة العامية](./ar-EG/README_ar-EG.md)
+- [🇧🇦 Bosanski](./bs-BS/README-bs_BS.md)
+- [🇩🇪 Deutsch](./de-DE/README.md)
+- [🇬🇧 English](../README.md)
+- [🇪🇸 Español](./es-ES/README-ES.md)
+- [🇫🇷 Français](./fr-FR/README_fr-FR.md)
+- [🇮🇩 Indonesia](./id-ID/README.md)
+- [🇯🇵 日本語](./ja-JA/README-ja_JA.md)
+- [🇳🇱 Nederlands](./nl-NL/README.md)
+- [🇧🇷 Português Brasil](./pt-BR/README_pt_BR.md)
+- [🇷🇺 Русский](./ru-RU/README.md)
+- [🇹🇭 ไทย](./th-TH/README-th_TH.md)
+- [🇹🇷 Türkçe](./tr-TR/README-tr_TR.md)
+- [🇺🇦 Українська мова](./ua-UA/README-ua_UA.md)
+- [🇻🇳 Tiếng Việt](./vi-VI/README-vi.md)
+- [🇨🇳 简体中文](./zh-CN/README-zh_CN.md)
+- [🇹🇼 繁體中文](./zh-TW/README_zh-TW.md)
 
 
 ---
@@ -1049,7 +1051,7 @@ console.log(typeof sayHi());
 
 `sayHi`함수는 즉시 호출 함수(IIFE)로서 리턴된 값을 리턴해요. 이 함수는 `0`을 리턴하고, 형은 `"number"`이에요.
 
-참고: 단 7개의 내장형이 있어요: `null`, `undefined`, `boolean`, `number`, `string`, `object` 그리고 `symbol`. `"function"`은 객체이기 때문에 형이 아니라 `"object"`형이에요.
+참고: 단 7개의 내장형이 있어요: `null`, `undefined`, `boolean`, `number`, `string`, `object`, `symbol` 그리고 `bigint`. `"function"`은 객체이기 때문에 형이 아니라 `"object"`형이에요.
 
 </p>
 </details>
@@ -2631,7 +2633,7 @@ console.log(person);
 
 #### 정답: A
 
-`city` 변수를 `person` rorcpdml `city`라고 불리는 속성 값으로 설정 했어요. 이 객체에서는 `city`라고 불리는 속성이 없기 때문에, `city`는 `undefined`의 값을 가져요. 
+`city` 변수를 `person` 객체의 `city`라고 불리는 속성 값으로 설정 했어요. 이 객체에서는 `city`라고 불리는 속성이 없기 때문에, `city`는 `undefined`의 값을 가져요. 
 
 `person`객체 자체를 참조 _하지않는_ 다는 걸 참고해요! 변수 `city`는 `person` 객체의 `city` 현재 속성 값으로 설정 했을 뿐이죠.
 
@@ -3257,7 +3259,7 @@ secondFunction()
 
 #### 정답: D
 
-promise를 사용하면, 기본적으로 _이 함수를 실행하고 싶지만, 시간이 좀 걸릴 수 있으니 실행중에 잠시 미뤄둘거에요. 확실한 값이 resoloved(혹은 rejected)로 전달되었을 때와 콜 스택이 비었을 때 이 값을 사용하고 싶어요_ 라고 말해요.
+promise를 사용하면, 기본적으로 _이 함수를 실행하고 싶지만, 시간이 좀 걸릴 수 있으니 실행 중에 잠시 미뤄둘거에요. 확실한 값이 resoloved(혹은 rejected)로 전달되었을 때와 콜 스택이 비었을 때 이 값을 사용하고 싶어요_ 라고 말해요.
 
 `async` 함수 안에서 `.then`과 `await` 두개의 키워드에서 값을 얻을 수 있어요. 비록  `.then`과 `await`에서 프라미스의 값을 얻을 수 있지만, 그들은 약간 다르게 작동해요.
 
@@ -3317,7 +3319,7 @@ Promise.resolve(5)
 
 - A: `5`
 - B: `Promise {<pending>: 5}`
-- C: `Promise {<resolved>: 5}`
+- C: `Promise {<fulfilled>: 5}`
 - D: `Error`
 
 <details><summary><b>정답</b></summary>
@@ -3325,7 +3327,7 @@ Promise.resolve(5)
 
 #### 정답: C
 
-promise이나 non-promise이 아니더라도 값의 모든 타입은 `Promise.resolve`으로 전달 할 수 있어요. 메소드 그 자체는 resolved 값을 가진 promise를 리턴해요. 정규 함수를 전달한다면, 정규 값을 가진 resolved promise를 얻게 될거에요. 만약 promise를 전달한다면, 전달된 promise의 resolved 값과 resolved promise를 얻게 될거에요.
+promise이나 non-promise이 아니더라도 값의 모든 타입은 `Promise.resolve`으로 전달 할 수 있어요. 메소드 그 자체는 resolved 값을 가진 promise를 리턴해요 (`<fulfilled>`). 정규 함수를 전달한다면, 정규 값을 가진 resolved promise를 얻게 될거에요. 만약 promise를 전달한다면, 전달된 promise의 resolved 값과 resolved promise를 얻게 될거에요.
 
 이 경우, 숫자 값 `5`를 전달했어요. 이것은 값 `5`를 가진 resolved promise를 리턴해요.
 
